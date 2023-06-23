@@ -1,0 +1,17 @@
+{
+  "name": "tor-restaurant",
+  "version": "1.0.0",
+  "description": "This is for an assignment from The Odin Project. I am taking this course with the sole focus of learning to incorporate JavaScript into my projects. All styling and design will be at a minimal state as I am focused on JS in this assignment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
