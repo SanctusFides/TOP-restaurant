@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0.8rem;
 }
 
 .beans-image {
@@ -18,15 +18,36 @@ body {
     object-fit: cover;
 }
 
+.rest-name {
+    font-size: 5.5rem;
+    position: absolute;
+    text-shadow: 2px 0 rgb(103, 72, 53), -2px 0 rgb(103, 72, 53), 0 2px rgb(103, 72, 53), 0 -2px rgb(103, 72, 53),
+    1px 1px rgb(103, 72, 53), -1px -1px rgb(103, 72, 53), 1px -1px rgb(103, 72, 53), -1px 1px rgb(103, 72, 53);
+}
+
 .nav-button {
     min-width: 5rem;
 
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .blurb {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     font-size: 1.5rem;
+    max-width: 40vw;
+    border: 3px solid white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: rgb(66, 46, 34);
+}
+
+.hours-list {
+    text-align: center;
 }
