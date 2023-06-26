@@ -43,14 +43,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    width: 40vw;
 }
 
-.blurb {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.blurb, .drinks, .contact {
     font-size: 1.5rem;
-    max-width: 40vw;
     border: 3px solid white;
     padding: 1.5rem;
     border-radius: 8px;
@@ -59,4 +56,31 @@ body {
 
 .hours-list {
     text-align: center;
+}
+
+.drinks > h2, p {
+    text-align: center;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-address {
+    text-align: start;
+}
+
+.flavors {
+    font-size: 1rem;
+}
+
+.street-image {
+    max-width:90%;
+    max-height:90%;
+}
+
+h3 {
+    margin-bottom: -1.7rem;
 }

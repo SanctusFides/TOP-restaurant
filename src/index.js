@@ -20,10 +20,12 @@ homeBtn.innerHTML = 'Home'
 homeBtn.addEventListener('click', home);
 const menuBtn = document.createElement('button');
 menuBtn.className = 'nav-button';
+menuBtn.id = 'menuButton'
 menuBtn.innerHTML = 'Menu'
 menuBtn.addEventListener('click', menu);
 const contactBtn = document.createElement('button');
 contactBtn.className = 'nav-button';
+contactBtn.id = 'contactButton'
 contactBtn.innerHTML = 'Contact'
 contactBtn.addEventListener('click', contact);
 
@@ -53,12 +55,13 @@ function home() {
     greeting.className = 'blurb greeting';
     const greetingText = document.createElement('p');
     greetingText.innerHTML = `Welcome to Odin's Cafe where you can satisfy all your Java needs!
-    <br><br>Here at Odin's cafe, we believe Java is serious business and that's why all of our sizes are standard`;
+    <br><br>Here at Odin's cafe, we believe Java is serious business and that's why all of our sizes are standardized`;
     greeting.appendChild(greetingText);
 
+    // Generates the hours of operation text and adds them to the content div
     const operatingHours = document.createElement('div');
     operatingHours.className = 'blurb hours';
-    const hoursTitle = document.createElement('p');
+    const hoursTitle = document.createElement('h2');
     hoursTitle.innerHTML = 'HOURS';
     const hoursList = document.createElement('p');
     // creating class name here to stylize the hours separately from the title
@@ -81,11 +84,85 @@ function home() {
 function menu() {
     content.innerHTML = "";
 
+    const drinks = document.createElement('div');
+    drinks.className = 'drinks';
+
+    const coffeTitle = document.createElement('h2');
+    coffeTitle.textContent = 'COFFEE'
+    drinks.appendChild(coffeTitle);
+
+    const coffeeList = document.createElement('p');
+    coffeeList.innerHTML = 
+    `SMALL - $2.99 
+    <br><br>
+    MEDIUM - $4.99
+    <br><br>
+    LARGE - $5.99 
+    `;
+    drinks.appendChild(coffeeList);
+
+    const teaTitle = document.createElement('h2');
+    teaTitle.textContent = 'TEA'
+    drinks.appendChild(teaTitle);
+
+    const teaFlavors = document.createElement('p');
+    teaFlavors.className = 'flavors';
+    teaFlavors.innerHTML = 'Green, Earl Grey, White, or Oolong';
+    drinks.appendChild(teaFlavors);
+
+    const teaList = document.createElement('p');
+    teaList.innerHTML = 
+    `SMALL - $1.99 
+    <br><br>
+    MEDIUM - $3.99
+    <br><br>
+    LARGE - $4.99 
+    `;
+
+    drinks.appendChild(teaList);
+
+    content.appendChild(drinks);
 }
 
 function contact() {
     content.innerHTML = "";
 
+    const contact = document.createElement('div');
+    contact.className = 'contact';
+
+    
+    const contactTitle = document.createElement('h2');
+    contactTitle.textContent = 'HOW TO REACH US';
+    contact.appendChild(contactTitle);
+
+    const contactInfo = document.createElement('p');
+    contactInfo.textContent = 'We are located inside the subway on Sesame Street'
+    contact.appendChild(contactInfo);
+
+    // Creates the image from Sesame Street
+    const contactImage = document.createElement('img');
+    contactImage.src = "../src/street.png";
+    contactImage.className = 'street-image';
+    contact.appendChild(contactImage);
+
+    const addressTitle = document.createElement('h3');
+    addressTitle.textContent = 'Address';
+    const contactAddress = document.createElement('p');
+    contactAddress.className = 'contact-address';
+    contactAddress.innerHTML = `123 Sesame Street <br>
+    Manhattan NY, 10016
+    `;
+    contact.appendChild(addressTitle);
+    contact.appendChild(contactAddress);
+
+    const phone = document.createElement('h3');
+    phone.textContent = 'Phone';
+    const contactPhone = document.createElement('p');
+    contactPhone.innerHTML = '555-123-4567';
+    contact.appendChild(phone);
+    contact.appendChild(contactPhone);
+
+    content.appendChild(contact);
 }
 
 // Preselecting the Home button when page finishes loading so the user is greeted with the home info
