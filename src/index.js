@@ -48,8 +48,7 @@ function home() {
     // IF THIS IS REMOVED, A NEW METHOD OF PREVENTING DUPING IS NECCESARY
     content.innerHTML = "";
 
-    // creating the info that the home button presents to the page - created on refresh as home button is set as selected
-
+    // creating the info that the home button presents to the page - this is the default content that loads with refreshing page
     const greeting = document.createElement('div');
     greeting.className = 'blurb greeting';
     const greetingText = document.createElement('p');
