@@ -6,7 +6,7 @@ import contact from './contact';
 
 // creates the image to use at the top of the page
 const image = document.createElement('img');
-image.src = "beans.jpg";
+image.src = "https://raw.githubusercontent.com/SanctusFides/TOP-restaurant/main/dist/beans.jpg";
 image.className = 'beans-image';
 document.body.appendChild(image);
 

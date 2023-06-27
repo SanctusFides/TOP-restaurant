@@ -18,7 +18,7 @@ export default function contact() {
 
     // Creates the image from Sesame Street
     const contactImage = document.createElement('img');
-    contactImage.src = "street.png";
+    contactImage.src = "https://github.com/SanctusFides/TOP-restaurant/blob/main/dist/street.png?raw=true";
     contactImage.className = 'street-image';
     contact.appendChild(contactImage);
 
